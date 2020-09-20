@@ -1,0 +1,45 @@
+# depslib dependency file v1.0
+1599929031 source:c:\users\vabha\desktop\data compression\main.cpp
+	<iostream>
+	<fstream>
+	<sstream>
+	<string>
+	<cstdlib>
+
+1599921801 source:c:\users\vabha\desktop\data compression\queue.cpp
+	<iostream>
+	<queue>
+
+1600507598 source:c:\users\vabha\desktop\college\sdp\data compression\queue.cpp
+	<iostream>
+	<queue>
+	<bits/stdc++.h>
+
+1600586110 source:c:\users\vabha\desktop\college\sdp\data compression\main.cpp
+	<iostream>
+	<fstream>
+	<sstream>
+	<string>
+	<cstdlib>
+	"rle.h"
+
+1600508732 c:\users\vabha\desktop\college\sdp\data compression\rle.h
+
+1600507922 c:\users\vabha\desktop\college\sdp\data compression\rle.cpp
+	<iostream>
+	<fstream>
+	<sstream>
+	<string>
+	<cstdlib>
+	"rle.h"
+
+1600508877 source:c:\users\vabha\desktop\college\sdp\data compression\rle.cpp
+	<iostream>
+	<fstream>
+	<sstream>
+	<string>
+	<cstdlib>
+	"rle.h"
+
+1600508892 source:c:\users\vabha\desktop\college\sdp\data compression\huffman.cpp
+
