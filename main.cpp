@@ -24,10 +24,11 @@ void printCharFreq(CharFreq arr[],int len);
 Node* createNode(int value);
 void sortNodes(Node *head, int len);
 void printNodeArr(Node *head);
-
+void printCharTable(Node *head, string code);
+void printNodeChar(Node *head, int len);
 
 int main() {
-    CharFreq arr[]={{'A',3},{'B',5},{'C',6},{'D',4},{'E',2}};
+    CharFreq arr[]={{'A',3},{'B',5},{'C',6},{'D',4},{'E',4}};
     int len=sizeof(arr)/sizeof(arr[0]);
 
     cout<<"Sorted Character Frequency: "<<endl;
@@ -37,40 +38,31 @@ int main() {
     Node *head, *newNode, *temp;
 
     head=createNode(arr[0].freq);
-
+    head->character=arr[0].character;
     temp=head;
 
 
     for(int i=1;i<len;i++){
         newNode=createNode(arr[i].freq);
-        temp->character=arr[i].character;
+        newNode->character=arr[i].character;
         temp->next=newNode;
         temp=temp->next;
     }
 
     cout<<"\nInitial Linked List: "<<endl;
     printNodeArr(head);
+    printNodeChar(head, len);
 
     sortNodes(head,len);
     cout<<"\nSorted Linked List: "<<endl;
-
     printNodeArr(head);
-    temp=head;
-    for(int i=0;i<len;i++){
-        cout<<temp->character<<" ";
-        temp=temp->next;
-    }
-    cout<<endl;
-
-    /*
-    Problems Right Now:
-    1. Character Swapping
-    2. Tree Structuring
-    */
+    printNodeChar(head, len);
 
     cout<<"\nArray Convergence:"<<endl;
     printNodeArr(head);
     cout<<"\n";
+
+    //Create the binary tree
     while(head->next!=NULL){
         newNode=createNode(0);
         temp=head;
@@ -83,8 +75,22 @@ int main() {
         sortNodes(head,--len);
     }
 
+    //cout<<"\nEl : "<<head->right->right->data;
+    //cout<<"\nChar : "<<head->right->right->character;
+    cout<<endl;
+
+    printCharTable(head, "");
 
     return 0;
+}
+
+void printNodeChar(Node *head, int len){
+     Node *temp=head;
+    for(int i=0;i<len;i++){
+        cout<<temp->character<<" -> ";
+        temp=temp->next;
+    }
+    cout<<endl;
 }
 
 void printNodeArr(Node *head){
@@ -98,6 +104,7 @@ void printNodeArr(Node *head){
     cout<<endl;
 }
 
+//sort the list using bubble sort
 void sortNodes(Node *head, int len){
     Node *p, *q, *temp_left, *temp_right;
     int temp_data;
@@ -130,7 +137,7 @@ void sortNodes(Node *head, int len){
 
 }
 
-
+//Compare frequency function
 int cmpFreq(const void* a, const void* b)
 {
 	CharFreq x = *(CharFreq*) a;
@@ -138,13 +145,14 @@ int cmpFreq(const void* a, const void* b)
     return x.freq-y.freq;
 }
 
+//Print characters and their frequency
 void printCharFreq(CharFreq arr[],int len){
         for(int i=0;i<len;i++){
         cout<<arr[i].character<<" "<<arr[i].freq<<endl;
     }
 }
 
-
+//Function to create and return a node
 Node* createNode(int value){
     Node *node;
     node=(Node*)malloc(sizeof(Node));
@@ -156,3 +164,19 @@ Node* createNode(int value){
     return node;
 }
 
+//Print the encoded values
+void printCharTable(Node* node, string code){
+    Node *temp;
+    temp=node;
+
+    if(node->character!=NULL){
+        cout<<node->character<<" : "<<code<<endl;
+    }
+
+    if(temp->right!=NULL){
+    printCharTable(temp->right, code+"1");
+    }
+    if(temp->right!=NULL){
+    printCharTable(temp->left, code+"0");
+    }
+}
