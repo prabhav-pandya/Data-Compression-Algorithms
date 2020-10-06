@@ -15,13 +15,16 @@
 	<queue>
 	<bits/stdc++.h>
 
-1601109827 source:c:\users\vabha\desktop\college\sdp\data compression\main.cpp
+1601989086 source:c:\users\vabha\desktop\college\sdp\data compression\main.cpp
 	<iostream>
 	<fstream>
 	<sstream>
 	<string>
 	<cstdlib>
+	<cstring>
+	<bits/stdc++.h>
 	"rle.h"
+	"huffman.h"
 
 1600508732 c:\users\vabha\desktop\college\sdp\data compression\rle.h
 
@@ -33,7 +36,7 @@
 	<cstdlib>
 	"rle.h"
 
-1600508877 source:c:\users\vabha\desktop\college\sdp\data compression\rle.cpp
+1601122510 source:c:\users\vabha\desktop\college\sdp\data compression\rle.cpp
 	<iostream>
 	<fstream>
 	<sstream>
@@ -41,5 +44,15 @@
 	<cstdlib>
 	"rle.h"
 
-1600508892 source:c:\users\vabha\desktop\college\sdp\data compression\huffman.cpp
+1601989831 source:c:\users\vabha\desktop\college\sdp\data compression\huffman.cpp
+	<iostream>
+	<fstream>
+	<sstream>
+	<string>
+	<cstdlib>
+	<cstring>
+	<bits/stdc++.h>
+	"huffman.h"
+
+1601989702 c:\users\vabha\desktop\college\sdp\data compression\huffman.h
 

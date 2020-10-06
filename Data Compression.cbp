@@ -34,6 +34,7 @@
 		</Compiler>
 		<Unit filename="Huffman.cpp" />
 		<Unit filename="RLE.cpp" />
+		<Unit filename="huffman.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="rle.h" />
 		<Extensions>
