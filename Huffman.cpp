@@ -22,7 +22,7 @@ huffman :: huffman(string file_content, int debug_mode){
         }
 
 //encode function
-void huffman :: encode(){
+string huffman :: encode(){
     int text_length=text.size();
     cout<<"\nSize of text (raw) in bits: "<<text.size()*8<<endl;
         string uniqChars="";
@@ -45,7 +45,7 @@ void huffman :: encode(){
     printCharFreq(arr,len);
 
     int n;
-    Node *head, *newNode, *temp;
+    Node *newNode, *temp;
 
     head=createNode(arr[0].freq);
     head->character=arr[0].character;
@@ -97,6 +97,21 @@ void huffman :: encode(){
 
     cout<<"\nSize after encoding (bits) : "<<sizeAfterEncoding<<endl;
 
+    return textToBin();
+}
+
+//text to binary using CodeTable after encoding
+string huffman :: textToBin(){
+    string bin="";
+    for(int i=0;i<text.size();i++){
+        for(int j=0;j<table_index;j++){
+            if(text[i]==codeTable[j].character){
+                bin+=codeTable[j].code;
+                break;
+            }
+        }
+    }
+    return bin;
 }
 
 //Print all the characters in the linked list
@@ -187,7 +202,7 @@ void huffman :: printCharTable(Node* node, string code){
         }
 
         codeTable[table_index].character=node->character;
-        codeTable[table_index].code=code;
+        codeTable[table_index++].code=code;
 
         sizeAfterEncoding+=code.size()*arr[i].freq;
 
@@ -202,6 +217,25 @@ void huffman :: printCharTable(Node* node, string code){
 }
 
 
+//Decode function (needs encoded binary string as a parameter)
+string huffman :: decode(string binary){
+    Node *temp;
+    temp=head;
+    string binToText="";
 
+    for(int i=0;i<binary.size();i++){
+        if(binary[i]=='1'){
+            temp=temp->right;
+        }
+        else{
+            temp=temp->left;
+        }
+        if(temp->character!=NULL){
+            binToText+=temp->character;
+            temp=head;
+        }
+    }
 
+    return binToText;
+}
 

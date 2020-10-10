@@ -25,6 +25,7 @@ typedef struct Node{
 class huffman{
 
     private:
+        Node *head;
         CharFreq arr[MAX];
         CodeTable codeTable[MAX];
         int sizeAfterEncoding;
@@ -38,7 +39,8 @@ class huffman{
 
         /**********************************/
 
-        void encode();
+        string encode();
+        string decode(string binary);
         int cmpFreq(const void* a, const void* b);
         void printCharFreq(CharFreq arr[],int len);
         void sortNodes(Node *head, int len);
@@ -46,6 +48,7 @@ class huffman{
         void printCharTable(Node *head, string code);
         void printNodeChar(Node *head, int len);
         void textToCharFreq(char text[], int len);
+        string textToBin();
         Node* createNode(int value);
 
         /***********************************/
