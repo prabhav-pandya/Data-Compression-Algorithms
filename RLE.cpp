@@ -19,45 +19,40 @@ namespace patch
     }
 }
 
-
-
-void getFileSize(){
-   ifstream in_file("test.txt", ios::binary);
-   in_file.seekg(0, ios::end);
-   int file_size = in_file.tellg();
-   cout<<"Size of the file is"<<" "<< file_size<<" "<<"bytes";
-   in_file.close();
+RLE :: RLE(string raw_string){
+    text=raw_string;
 }
 
-void RLE(string sample){
+string RLE :: encode(){
     stringstream ss;
     string newString="";
-    char currentLetter=sample[0];
-    int letterNum=1,i=1, len=sample.length();
+    char currentLetter=text[0];
+    int letterNum=1,i=1, len=text.length();
 
 
-    while(i<len){
-        if(sample[i]==currentLetter){
+    while(i<=len){
+        if(text[i]==currentLetter){
             letterNum++;
             i++;
         }
         else{
-
+            while(letterNum>9){
+                newString+=currentLetter+patch::to_string(9);
+                letterNum-=9;
+            }
             newString+=currentLetter+patch::to_string(letterNum);
-            currentLetter=sample[i];
+            currentLetter=text[i];
             letterNum=1;
             i++;
         }
-
     }
     cout<<newString;
-    saveFile(newString);
 
+    return newString;
 }
 
-//Doesn't work when frequency is more than 1 digit!
 
-void decodeRLE(string text){
+void RLE :: decode(string text){
     string decodedText="";
     int index=0,len=text.length(),freq;
     while(index<len){
@@ -69,31 +64,7 @@ void decodeRLE(string text){
         index+=2;
     }
     cout<<decodedText;
-    saveFile(decodedText);
-
-
 }
 
-void saveFile(string text){
-    ofstream outFile("encoded.txt");
-    outFile<<text;
-    outFile.close();
-}
 
-void mainCode(){
-        string text="",line;
-    ifstream inFile;
-    inFile.open("encoded.txt");
 
-    while(!inFile.eof()){
-        getline(inFile,line);
-        text+=line+"\n";
-    }
-    cout<<text<<endl;
-
-    decodeRLE(text);
-    cout<<endl;
-    cout<<"Compression done!";
-
-    inFile.close();
-}

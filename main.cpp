@@ -36,14 +36,22 @@ int main() {
     string text;
 
     text=readTextFile();
-    cout<<text<<"\n"<<endl;
+    cout<<text<<endl;
 
+    RLE rle(text);
+
+    cout<<"\nEncoded String : "<<endl;
+    string encoded_text=rle.encode();
+    cout<<"\n\nDecoded String : "<<endl;
+    rle.decode(encoded_text);
+
+    /*
     huffman compressor(text,1);
 
     string compressedBinary=compressor.encode();
 
     cout<<"\nAfter decoding : \n";
-    cout<<compressor.decode(compressedBinary);
+    cout<<compressor.decode(compressedBinary);*/
 
     return 0;
 }
