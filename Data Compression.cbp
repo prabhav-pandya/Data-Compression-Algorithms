@@ -33,6 +33,8 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="Huffman.cpp" />
+		<Unit filename="LZ78.cpp" />
+		<Unit filename="LZ78.h" />
 		<Unit filename="RLE.cpp" />
 		<Unit filename="huffman.h" />
 		<Unit filename="main.cpp" />

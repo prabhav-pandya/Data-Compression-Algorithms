@@ -1,7 +1,8 @@
 #include<iostream>
 #include<fstream>
-#include "rle.h"
-#include "huffman.h"
+//#include "rle.h"
+//#include "huffman.h"
+#include "LZ78.h"
 
 using namespace std;
 
@@ -35,24 +36,36 @@ int main() {
 
     string text;
 
-    text=readTextFile();
-    cout<<text<<endl;
+    //text=readTextFile();
+    //cout<<text<<endl;
 
+    text="abababcbababaa";
+
+    LZ78 compressor(text, 0);
+
+    compressor.encode();
+
+
+    /** For RLE
     RLE rle(text);
 
     cout<<"\nEncoded String : "<<endl;
     string encoded_text=rle.encode();
     cout<<"\n\nDecoded String : "<<endl;
     rle.decode(encoded_text);
+    */
 
-    /*
+    /**For huffman
+
     huffman compressor(text,1);
 
     string compressedBinary=compressor.encode();
 
     cout<<"\nAfter decoding : \n";
-    cout<<compressor.decode(compressedBinary);*/
+    cout<<compressor.decode(compressedBinary);
+    */
 
     return 0;
 }
+
 
