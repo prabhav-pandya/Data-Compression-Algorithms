@@ -1,0 +1,3 @@
+"C:\Program Files\JetBrains\CLion 2020.2.4\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\Data_Compression.dir/objects.a
+C:\PROGRA~2\CODEBL~1\MinGW\bin\ar.exe cr CMakeFiles\Data_Compression.dir/objects.a @CMakeFiles\Data_Compression.dir\objects1.rsp
+C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE -g   -Wl,--whole-archive CMakeFiles\Data_Compression.dir/objects.a -Wl,--no-whole-archive  -o Data_Compression.exe -Wl,--out-implib,libData_Compression.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Data_Compression.dir\linklibs.rsp

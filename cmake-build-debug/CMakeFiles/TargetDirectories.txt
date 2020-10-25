@@ -1,0 +1,3 @@
+C:/Users/vabha/Desktop/College/SDP/Data Compression/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/vabha/Desktop/College/SDP/Data Compression/cmake-build-debug/CMakeFiles/Data_Compression.dir
+C:/Users/vabha/Desktop/College/SDP/Data Compression/cmake-build-debug/CMakeFiles/rebuild_cache.dir

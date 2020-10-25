@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/vabha/Desktop/College/SDP/Data Compression/LZ78.cpp
+iostream
+-
+bits/stdc++.h
+-
+LZ78.h
+C:/Users/vabha/Desktop/College/SDP/Data Compression/LZ78.h
+string.h
+-
+
+C:/Users/vabha/Desktop/College/SDP/Data Compression/LZ78.h
+bits/stdc++.h
+-
+

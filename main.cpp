@@ -36,14 +36,16 @@ int main() {
 
     string text;
 
-    //text=readTextFile();
-    //cout<<text<<endl;
+    /**text=readTextFile();
+    cout<<text<<endl;**/
 
     text="abababcbababaa";
 
     LZ78 compressor(text, 0);
 
     compressor.encode();
+
+    compressor.decode();
 
 
     /** For RLE
@@ -53,7 +55,8 @@ int main() {
     string encoded_text=rle.encode();
     cout<<"\n\nDecoded String : "<<endl;
     rle.decode(encoded_text);
-    */
+    **/
+
 
     /**For huffman
 
@@ -63,7 +66,8 @@ int main() {
 
     cout<<"\nAfter decoding : \n";
     cout<<compressor.decode(compressedBinary);
-    */
+
+     **/
 
     return 0;
 }
