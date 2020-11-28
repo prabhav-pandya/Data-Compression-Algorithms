@@ -10,7 +10,7 @@ typedef struct Node{
 
 typedef struct trie{
     char ch;
-    int parent_index;
+    //int parent_index;
     int index;
 } trie;
 

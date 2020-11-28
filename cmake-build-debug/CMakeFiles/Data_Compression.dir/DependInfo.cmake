@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/vabha/Desktop/College/SDP/Data Compression/Huffman.cpp" "C:/Users/vabha/Desktop/College/SDP/Data Compression/cmake-build-debug/CMakeFiles/Data_Compression.dir/Huffman.cpp.obj"
+  "C:/Users/vabha/Desktop/College/SDP/Data Compression/LZ77.cpp" "C:/Users/vabha/Desktop/College/SDP/Data Compression/cmake-build-debug/CMakeFiles/Data_Compression.dir/LZ77.cpp.obj"
   "C:/Users/vabha/Desktop/College/SDP/Data Compression/LZ78.cpp" "C:/Users/vabha/Desktop/College/SDP/Data Compression/cmake-build-debug/CMakeFiles/Data_Compression.dir/LZ78.cpp.obj"
   "C:/Users/vabha/Desktop/College/SDP/Data Compression/RLE.cpp" "C:/Users/vabha/Desktop/College/SDP/Data Compression/cmake-build-debug/CMakeFiles/Data_Compression.dir/RLE.cpp.obj"
   "C:/Users/vabha/Desktop/College/SDP/Data Compression/main.cpp" "C:/Users/vabha/Desktop/College/SDP/Data Compression/cmake-build-debug/CMakeFiles/Data_Compression.dir/main.cpp.obj"

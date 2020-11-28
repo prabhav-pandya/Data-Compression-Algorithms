@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Data_Compression.dir/Huffman.cpp.obj"
+  "CMakeFiles/Data_Compression.dir/LZ77.cpp.obj"
   "CMakeFiles/Data_Compression.dir/LZ78.cpp.obj"
   "CMakeFiles/Data_Compression.dir/RLE.cpp.obj"
   "CMakeFiles/Data_Compression.dir/main.cpp.obj"

@@ -2,7 +2,8 @@
 #include<fstream>
 //#include "rle.h"
 //#include "huffman.h"
-#include "LZ78.h"
+//#include "LZ78.h"
+#include "LZ77.h"
 
 using namespace std;
 
@@ -32,43 +33,27 @@ void writeTextFile(string text){
     file.close();
 }
 
-int main() {
 
+int on_extract_entry(const char *filename, void *arg) {
+    static int i = 0;
+    int n = *(int *)arg;
+    printf("Extracted: %s (%d of %d)\n", filename, ++i, n);
+
+    return 0;
+}
+
+
+int main() {
     string text;
 
-    /**text=readTextFile();
-    cout<<text<<endl;**/
+    text=readTextFile();
+    cout<<"Original String : "<<text<<endl;
 
-    text="abababcbababaa";
-
-    LZ78 compressor(text, 0);
-
-    compressor.encode();
-
-    compressor.decode();
-
-
-    /** For RLE
-    RLE rle(text);
-
-    cout<<"\nEncoded String : "<<endl;
-    string encoded_text=rle.encode();
-    cout<<"\n\nDecoded String : "<<endl;
-    rle.decode(encoded_text);
-    **/
-
-
-    /**For huffman
-
-    huffman compressor(text,1);
-
-    string compressedBinary=compressor.encode();
-
-    cout<<"\nAfter decoding : \n";
-    cout<<compressor.decode(compressedBinary);
-
-     **/
-
+    //class call code here...
+    LZ77 lz77(text,1);
+    lz77.encode();
+    cout<<"\nDecoded string:"<<endl;
+    lz77.decode();
     return 0;
 }
 

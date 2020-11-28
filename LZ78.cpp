@@ -5,12 +5,21 @@
 
 using namespace std;
 
+/** Call Implementation
+    LZ78 compressor(text, 0);
+
+    compressor.encode();
+
+    compressor.decode();
+ * **/
+
 //Initialise the parameters
 LZ78 :: LZ78(string raw_text, int is_debug){
     text=raw_text;
     index=-1;
     root=createNode(' ',++index);
     debug=is_debug;
+    cout<<"Num of characters : "<<raw_text.size()<<endl<<endl;
 }
 
 
@@ -38,7 +47,6 @@ void LZ78 :: encode(){
     parent_node=root;
     parent_index=parent_node->index;
 
-    cout<<"Raw string : "<<text<<endl<<endl;
 
     for(int i=0;i<text.size();i++){
         if(debug) cout<<endl<<text[i]<<endl;
@@ -49,7 +57,7 @@ void LZ78 :: encode(){
 
         if(child_index==-1){
             parent_node->child.push_back(createNode(text[i],++index));
-            encoded_data[encoded_data_len++]={text[i], parent_index, index};
+            encoded_data[encoded_data_len++]={text[i], index};
             parent_node=root;
             parent_index=root->index;
         }
@@ -66,9 +74,10 @@ void LZ78 :: encode(){
 //Display the encoded data
 void LZ78 :: displayEncodedData(trie encoded_data[], int encoded_data_len){
     for(int i=0;i<encoded_data_len;i++){
-        cout<<"("<<encoded_data[i].parent_index<<", "<<encoded_data[i].ch<<")"<<encoded_data[i].index<<", ";
+        cout<<"("<<encoded_data[i].ch<<", "<<encoded_data[i].index<<"), ";
     }
     cout<<endl;
+    cout<<"Number of characters in encoded string : "<<4*encoded_data_len<<endl;
 }
 
 //find child using recursion

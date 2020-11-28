@@ -11,6 +11,18 @@
 #define MAX 256
 
 
+/** Call Implementation
+
+    huffman compressor(text,1);
+
+    string compressedBinary=compressor.encode();
+
+    cout<<"\nAfter decoding : \n";
+    cout<<compressor.decode(compressedBinary);
+
+ **/
+
+
 using namespace std;
 
 //constructor

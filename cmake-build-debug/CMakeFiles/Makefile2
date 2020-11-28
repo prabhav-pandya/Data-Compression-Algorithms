@@ -93,12 +93,12 @@ clean: CMakeFiles/Data_Compression.dir/clean
 CMakeFiles/Data_Compression.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Data_Compression.dir\build.make CMakeFiles/Data_Compression.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Data_Compression.dir\build.make CMakeFiles/Data_Compression.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\vabha\Desktop\College\SDP\Data Compression\cmake-build-debug\CMakeFiles" --progress-num=1,2,3,4,5 "Built target Data_Compression"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\vabha\Desktop\College\SDP\Data Compression\cmake-build-debug\CMakeFiles" --progress-num=1,2,3,4,5,6 "Built target Data_Compression"
 .PHONY : CMakeFiles/Data_Compression.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Data_Compression.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\vabha\Desktop\College\SDP\Data Compression\cmake-build-debug\CMakeFiles" 5
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\vabha\Desktop\College\SDP\Data Compression\cmake-build-debug\CMakeFiles" 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/Data_Compression.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\vabha\Desktop\College\SDP\Data Compression\cmake-build-debug\CMakeFiles" 0
 .PHONY : CMakeFiles/Data_Compression.dir/rule

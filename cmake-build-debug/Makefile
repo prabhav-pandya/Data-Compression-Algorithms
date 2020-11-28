@@ -169,6 +169,33 @@ Huffman.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Data_Compression.dir\build.make CMakeFiles/Data_Compression.dir/Huffman.cpp.s
 .PHONY : Huffman.cpp.s
 
+LZ77.obj: LZ77.cpp.obj
+
+.PHONY : LZ77.obj
+
+# target to build an object file
+LZ77.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Data_Compression.dir\build.make CMakeFiles/Data_Compression.dir/LZ77.cpp.obj
+.PHONY : LZ77.cpp.obj
+
+LZ77.i: LZ77.cpp.i
+
+.PHONY : LZ77.i
+
+# target to preprocess a source file
+LZ77.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Data_Compression.dir\build.make CMakeFiles/Data_Compression.dir/LZ77.cpp.i
+.PHONY : LZ77.cpp.i
+
+LZ77.s: LZ77.cpp.s
+
+.PHONY : LZ77.s
+
+# target to generate assembly for a file
+LZ77.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Data_Compression.dir\build.make CMakeFiles/Data_Compression.dir/LZ77.cpp.s
+.PHONY : LZ77.cpp.s
+
 LZ78.obj: LZ78.cpp.obj
 
 .PHONY : LZ78.obj
@@ -262,6 +289,9 @@ help:
 	@echo ... Huffman.obj
 	@echo ... Huffman.i
 	@echo ... Huffman.s
+	@echo ... LZ77.obj
+	@echo ... LZ77.i
+	@echo ... LZ77.s
 	@echo ... LZ78.obj
 	@echo ... LZ78.i
 	@echo ... LZ78.s

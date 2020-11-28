@@ -6,17 +6,17 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/vabha/Desktop/College/SDP/Data Compression/LZ78.cpp
+C:/Users/vabha/Desktop/College/SDP/Data Compression/LZ77.cpp
+LZ77.h
+C:/Users/vabha/Desktop/College/SDP/Data Compression/LZ77.h
+
+C:/Users/vabha/Desktop/College/SDP/Data Compression/LZ77.h
 iostream
 -
-bits/stdc++.h
+deque
 -
-LZ78.h
-C:/Users/vabha/Desktop/College/SDP/Data Compression/LZ78.h
-string.h
+algorithm
 -
-
-C:/Users/vabha/Desktop/College/SDP/Data Compression/LZ78.h
-bits/stdc++.h
+vector
 -
 

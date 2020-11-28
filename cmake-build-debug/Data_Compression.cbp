@@ -88,6 +88,12 @@
 		<Unit filename="C:/Users/vabha/Desktop/College/SDP/Data Compression/Huffman.h">
 			<Option target="Data_Compression"/>
 		</Unit>
+		<Unit filename="C:/Users/vabha/Desktop/College/SDP/Data Compression/LZ77.cpp">
+			<Option target="Data_Compression"/>
+		</Unit>
+		<Unit filename="C:/Users/vabha/Desktop/College/SDP/Data Compression/LZ77.h">
+			<Option target="Data_Compression"/>
+		</Unit>
 		<Unit filename="C:/Users/vabha/Desktop/College/SDP/Data Compression/LZ78.cpp">
 			<Option target="Data_Compression"/>
 		</Unit>

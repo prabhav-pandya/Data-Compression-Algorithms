@@ -4,12 +4,15 @@
 CMakeFiles/Data_Compression.dir/Huffman.cpp.obj: ../Huffman.cpp
 CMakeFiles/Data_Compression.dir/Huffman.cpp.obj: ../huffman.h
 
+CMakeFiles/Data_Compression.dir/LZ77.cpp.obj: ../LZ77.cpp
+CMakeFiles/Data_Compression.dir/LZ77.cpp.obj: ../LZ77.h
+
 CMakeFiles/Data_Compression.dir/LZ78.cpp.obj: ../LZ78.cpp
 CMakeFiles/Data_Compression.dir/LZ78.cpp.obj: ../LZ78.h
 
 CMakeFiles/Data_Compression.dir/RLE.cpp.obj: ../RLE.cpp
 CMakeFiles/Data_Compression.dir/RLE.cpp.obj: ../rle.h
 
-CMakeFiles/Data_Compression.dir/main.cpp.obj: ../LZ78.h
+CMakeFiles/Data_Compression.dir/main.cpp.obj: ../LZ77.h
 CMakeFiles/Data_Compression.dir/main.cpp.obj: ../main.cpp
 

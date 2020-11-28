@@ -12,4 +12,4 @@ add_executable(Data_Compression
         LZ78.h
         main.cpp
         RLE.cpp
-        rle.h)
+        rle.h LZ77.cpp LZ77.h)

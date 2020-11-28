@@ -7,6 +7,18 @@
 #include "rle.h"
 
 
+/** Call Implementation
+
+    RLE rle(text);
+
+    cout<<"\nEncoded String : "<<endl;
+    string encoded_text=rle.encode();
+
+    cout<<"\n\nDecoded String : "<<endl;
+    rle.decode(encoded_text);
+**/
+
+
 using namespace std;
 
 namespace patch
